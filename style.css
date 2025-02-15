@@ -16,8 +16,36 @@ body {
     border-radius: 12px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 280px; /* Reduced width for better symmetry */
+    width: 300px;
     color: #fff;
+}
+
+/* Navigation Pills */
+.nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    background: #2a2a2a;
+    color: #00c6ff;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nav-btn.active {
+    background: #00c6ff;
+    color: #121212;
+    font-weight: bold;
+}
+
+/* Hidden sections */
+.hidden {
+    display: none;
 }
 
 /* Title */
@@ -42,9 +70,9 @@ label {
     color: #bbb;
 }
 
-/* Input fields with improved symmetry */
+/* Input fields */
 input {
-    width: 92%; /* Reduced width */
+    width: 92%;
     padding: 8px;
     font-size: 15px;
     border: none;
@@ -57,13 +85,8 @@ input {
     transition: all 0.2s ease-in-out;
 }
 
-/* Input hover and focus effect */
-input:focus {
-    box-shadow: inset 0px 0px 8px rgba(0, 198, 255, 0.6);
-}
-
-/* Rake result box */
-#result {
+/* Result boxes */
+#result, #zscore-result {
     margin-top: 15px;
     font-size: 16px;
     font-weight: bold;
