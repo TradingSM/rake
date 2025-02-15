@@ -20,7 +20,7 @@ function calculateRake() {
     let p2 = 1 / o2;
     let rakePercentage = ((p1 + p2) - 1) * 100;
 
-    document.getElementById("result").innerText = `Rake: ${rakePercentage.toFixed(2)}%`;
+    document.getElementById("result").innerText = `Vig: ${rakePercentage.toFixed(2)}%`;
 }
 
 // Attach event listeners to enforce numeric input (including decimal support)
