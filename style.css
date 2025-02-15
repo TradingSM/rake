@@ -120,7 +120,7 @@ input {
     transition: all 0.2s ease-in-out;
 }
 
-/* Result Display (Make it Text Instead of Button) */
+/* Result Display */
 #result, #zscore-result {
     margin-top: 15px;
     font-size: 22px; /* Increase font size */
