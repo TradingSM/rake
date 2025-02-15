@@ -16,60 +16,85 @@ body {
     border-radius: 12px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 300px;
+    width: 320px;
     color: #fff;
-    overflow: hidden; /* Prevents shifting */
+    overflow: hidden;
+    position: relative;
 }
 
 /* Navigation Pills */
 .nav {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    height: 42px; /* Fix pill height */
+    position: relative;
+    z-index: 10; /* Ensures pills stay above content */
 }
 
+/* Fix for button alignment issues */
 .nav-btn {
     background: #2a2a2a;
     color: #00c6ff;
     padding: 10px;
-    border: none;
+    border: 2px solid #2a2a2a;
     border-radius: 6px;
     cursor: pointer;
     font-size: 14px;
+    height: 100%;
+    width: 140px; /* Ensures buttons stay equal width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+    letter-spacing: 0.5px; /* Ensures equal spacing for text */
 }
 
 .nav-btn.active {
     background: #00c6ff;
     color: #121212;
-    font-weight: bold;
+    border: 2px solid #00c6ff;
 }
 
-/* Fix layout shift: Set a min-height */
+/* Fix layout shift & make content appear */
 .calculator-section {
-    min-height: 200px; /* Adjust based on tallest section */
+    min-height: 260px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    transition: opacity 0.3s ease-in-out;
+    justify-content: flex-start; /* Ensures title stays at the same position */
+    align-items: center;
+    width: 100%;
+    margin-top: 0px;
+    padding-top: 10px; /* Ensures consistent title spacing */
 }
 
-/* Hidden sections */
+/* Fix for hidden content */
 .hidden {
     display: none;
 }
 
-/* Title */
+/* Title - Fixed distance from pills */
 h1 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
+    margin-top: 0px; /* Keep this the same for both sections */
+    padding-top: 10px; /* Ensures consistent spacing below pills */
     margin-bottom: 15px;
     color: #00c6ff;
+    text-transform: uppercase;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Input field container */
 .input-group {
     margin-bottom: 12px;
     text-align: left;
+    width: 90%;
 }
 
 /* Labels */
@@ -82,7 +107,7 @@ label {
 
 /* Input fields */
 input {
-    width: 92%;
+    width: 100%;
     padding: 8px;
     font-size: 15px;
     border: none;
@@ -95,14 +120,25 @@ input {
     transition: all 0.2s ease-in-out;
 }
 
-/* Result boxes */
+/* Result Display (Make it Text Instead of Button) */
 #result, #zscore-result {
     margin-top: 15px;
-    font-size: 16px;
+    font-size: 22px; /* Increase font size */
     font-weight: bold;
-    padding: 10px;
-    background: #00c6ff;
-    color: #121212;
-    border-radius: 6px;
-    box-shadow: 0px 5px 15px rgba(0, 198, 255, 0.4);
+    color: #00c6ff; /* Change color to blue instead of background */
+    background: none; /* Remove button-like background */
+    border-radius: 0; /* No rounded corners */
+    box-shadow: none; /* Remove button-like shadow */
+    text-align: center;
+    height: auto; /* Allow it to size dynamically */
+    padding: 5px 0; /* Adjust padding */
+}
+
+
+/* Ensure pills content is formatted the same */
+.calculator-section .input-group,
+.calculator-section h1,
+.calculator-section .result-box {
+    text-align: center;
+    width: 90%;
 }
