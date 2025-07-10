@@ -13,6 +13,7 @@
       <button class="nav-btn active" data-target="vig-calculator">Vig Calculator</button>
       <button class="nav-btn" data-target="zscore-calculator">Z-Score Calculator</button>
       <button class="nav-btn" data-target="ou-calculator">O/U from Rake</button>
+      <button class="nav-btn" data-target="flex-calculator">Flex Payouts</button>
     </div>
 
     <!-- Vig Calculator Section -->
@@ -53,11 +54,48 @@
       <div id="ou-result" class="result-text">Over: –, Under: –</div>
     </div>
   </div>
+  
+<!-- Flex Tier Calculator Section -->
+<div id="flex-calculator" class="calculator-section hidden">
+  <h1>Flex Payouts</h1>
+
+  <div class="input-group">
+    <label for="fixedMultiplier">Fixed Multiplier</label>
+    <input type="number" id="fixedMultiplier" value="180" step="1">
+  </div>
+
+  <div class="input-group">
+    <label for="fixedProbability">Fixed Probability (e.g. 0.005)</label>
+    <input type="number" id="fixedProbability" value="0.005" step="0.0001" min="0" max="1">
+  </div>
+
+  <div class="input-group">
+    <label for="topFlexFraction">Top Flex Fraction (e.g. 0.25)</label>
+    <input type="number" id="topFlexFraction" value="0.25" step="0.01" min="0" max="1">
+  </div>
+
+  <div class="input-group">
+    <label for="minDrop">Min Relative Drop (e.g. 4)</label>
+    <input type="number" id="minDrop" value="4" step="0.1" min="0">
+  </div>
+
+  <div class="input-group">
+    <label for="minCap">Min Cap (e.g. 0.2)</label>
+    <input type="number" id="minCap" value="0.2" step="0.01" min="0">
+  </div>
+
+  <!-- Tier Entry Section -->
+  <div id="tier-inputs"></div>
+  <button id="add-tier" class="nav-btn" style="margin-top: 10px;">+ Add Tier</button>
+
+  <div id="flex-result" class="result-text">Results will appear here.</div>
+</div>
 
   <script src="site.js" defer></script>
   <script src="func.js" defer></script>
   <script src="zscore.js" defer></script>
   <script src="ou.js" defer></script>
+  <script src="flex.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.9.4/jstat.min.js"></script>
 </body>
 </html>
