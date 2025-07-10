@@ -30,28 +30,33 @@ body {
     height: 42px;
     position: relative;
     z-index: 10;
-    gap: 5px;
+    gap: 6px;
+    flex-wrap: wrap; /* Allows wrapping if needed */
 }
 
 /* Pill buttons */
 .nav-btn {
     background: #2a2a2a;
     color: #00c6ff;
-    padding: 10px;
+    padding: 10px 6px;
     border: 2px solid #2a2a2a;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 13px;
-    height: 100%;
-    flex: 1;
+    font-size: 12.5px;
+    flex: 1 1 30%; /* Responsive layout: grow, shrink, basis */
+    min-width: 90px;
+    max-width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
     font-weight: bold;
     transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
+    text-align: center;
+    line-height: 1.1;
 }
+
 
 .nav-btn.active {
     background: #00c6ff;
