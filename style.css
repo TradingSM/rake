@@ -134,6 +134,13 @@ input {
     padding: 5px 0; /* Adjust padding */
 }
 
+#ou-result {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #00c6ff;
+    text-align: center;
+}
 
 /* Ensure pills content is formatted the same */
 .calculator-section .input-group,
