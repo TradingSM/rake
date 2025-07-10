@@ -12,6 +12,7 @@
         <div class="nav">
             <button class="nav-btn active" data-target="vig-calculator">Vig Calculator</button>
             <button class="nav-btn" data-target="zscore-calculator">Z-Score Calculator</button>
+            <button class="nav-btn" data-target="ou-calculator">O/U from Rake</button>
         </div>
 
         <!-- Vig Calculator Section -->
@@ -38,6 +39,20 @@
             <div id="zscore-result">Z-Score: 0</div>
         </div>
     </div>
+
+    <!-- O/U Calculator Section -->
+<div id="ou-calculator" class="calculator-section hidden">
+    <h1>O/U from Rake</h1>
+    <div class="input-group">
+        <label for="probOver">Over Probability (0-1)</label>
+        <input type="number" id="probOver" value="0.46" step="0.01" min="0" max="1">
+    </div>
+    <div class="input-group">
+        <label for="marginalRake">Marginal Rake (e.g., 0.13)</label>
+        <input type="number" id="marginalRake" value="0.13" step="0.01" min="0">
+    </div>
+    <div id="ou-result">Over: –, Under: –</div>
+</div>
 
     <script src="site.js" defer></script>
     <script src="func.js" defer></script>
