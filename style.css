@@ -27,12 +27,13 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
-    height: 42px; /* Fix pill height */
+    height: 42px;
     position: relative;
-    z-index: 10; /* Ensures pills stay above content */
+    z-index: 10;
+    gap: 5px;
 }
 
-/* Fix for button alignment issues */
+/* Pill buttons */
 .nav-btn {
     background: #2a2a2a;
     color: #00c6ff;
@@ -40,16 +41,16 @@ body {
     border: 2px solid #2a2a2a;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
     height: 100%;
-    width: 140px; /* Ensures buttons stay equal width */
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
     font-weight: bold;
     transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
-    letter-spacing: 0.5px; /* Ensures equal spacing for text */
+    letter-spacing: 0.5px;
 }
 
 .nav-btn.active {
@@ -58,29 +59,29 @@ body {
     border: 2px solid #00c6ff;
 }
 
-/* Fix layout shift & make content appear */
+/* Calculator Sections */
 .calculator-section {
     min-height: 260px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Ensures title stays at the same position */
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     margin-top: 0px;
-    padding-top: 10px; /* Ensures consistent title spacing */
+    padding-top: 10px;
 }
 
-/* Fix for hidden content */
+/* Hide inactive calculators */
 .hidden {
     display: none;
 }
 
-/* Title - Fixed distance from pills */
+/* Section Title */
 h1 {
     font-size: 22px;
     font-weight: bold;
-    margin-top: 0px; /* Keep this the same for both sections */
-    padding-top: 10px; /* Ensures consistent spacing below pills */
+    margin-top: 0px;
+    padding-top: 10px;
     margin-bottom: 15px;
     color: #00c6ff;
     text-transform: uppercase;
@@ -120,32 +121,23 @@ input {
     transition: all 0.2s ease-in-out;
 }
 
-/* Result Display */
-#result, #zscore-result {
-    margin-top: 15px;
-    font-size: 22px; /* Increase font size */
-    font-weight: bold;
-    color: #00c6ff; /* Change color to blue instead of background */
-    background: none; /* Remove button-like background */
-    border-radius: 0; /* No rounded corners */
-    box-shadow: none; /* Remove button-like shadow */
-    text-align: center;
-    height: auto; /* Allow it to size dynamically */
-    padding: 5px 0; /* Adjust padding */
-}
-
-#ou-result {
+/* Result Text (shared across all calculators) */
+.result-text {
     margin-top: 15px;
     font-size: 22px;
     font-weight: bold;
     color: #00c6ff;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
     text-align: center;
+    padding: 5px 0;
 }
 
-/* Ensure pills content is formatted the same */
+/* Shared formatting rules */
 .calculator-section .input-group,
 .calculator-section h1,
-.calculator-section .result-box {
+.calculator-section .result-text {
     text-align: center;
     width: 90%;
 }
