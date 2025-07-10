@@ -55,18 +55,18 @@
     </div>
   </div>
   
-<!-- Flex Tier Calculator Section -->
+<!-- Flex Payouts Calculator Section -->
 <div id="flex-calculator" class="calculator-section hidden">
   <h1>Flex Payouts</h1>
 
   <div class="input-group">
     <label for="fixedMultiplier">Fixed Multiplier</label>
-    <input type="number" id="fixedMultiplier" value="180" step="1">
+    <input type="number" id="fixedMultiplier" value="180" step="1" min="1">
   </div>
 
   <div class="input-group">
-    <label for="fixedProbability">Fixed Probability (e.g. 0.005)</label>
-    <input type="number" id="fixedProbability" value="0.005" step="0.0001" min="0" max="1">
+    <label for="fixedProb">Fixed Probability (e.g. 0.005)</label>
+    <input type="number" id="fixedProb" value="0.005" step="0.001" min="0" max="1">
   </div>
 
   <div class="input-group">
@@ -75,14 +75,25 @@
   </div>
 
   <div class="input-group">
-    <label for="minDrop">Min Relative Drop (e.g. 4)</label>
-    <input type="number" id="minDrop" value="4" step="0.1" min="0">
+    <label for="minRelativeDrop">Min Relative Drop (e.g. 4)</label>
+    <input type="number" id="minRelativeDrop" value="4" step="1" min="0">
   </div>
 
   <div class="input-group">
     <label for="minCap">Min Cap (e.g. 0.2)</label>
     <input type="number" id="minCap" value="0.2" step="0.01" min="0">
   </div>
+
+  <div id="flex-tiers-container">
+    <!-- Dynamic tier rows will be added here -->
+  </div>
+
+  <button id="addTierBtn" class="action-btn">+ Add Tier</button>
+  <button id="calculateFlexBtn" class="action-btn">Calculate</button>
+
+  <div id="flex-result" class="result-text">Results will appear here.</div>
+</div>
+
 
   <!-- Tier Entry Section -->
   <div id="tier-inputs"></div>
