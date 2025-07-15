@@ -8,6 +8,17 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.toggle('light-mode');
         themeBtn.textContent = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
     });
+    
+    const themeMetaTag = document.querySelector('meta[name="theme-color"]');
+
+    themeBtn.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light-mode');
+    themeBtn.textContent = isLight ? 'Dark Mode' : 'Light Mode';
+    themeMetaTag.setAttribute('content', isLight ? '#ff4c4c' : '#00c6ff');
+    });
+
+
+    
 
     // Navigation pills functionality
     navButtons.forEach(button => {
