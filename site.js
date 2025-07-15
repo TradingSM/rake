@@ -14,6 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 section.classList.add("hidden");
             });
 
+            const themeBtn = document.getElementById('themeBtn');
+
+            themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            themeBtn.textContent = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
+            });
+
+
             // Show the selected calculator
             const targetId = this.getAttribute("data-target");
             document.getElementById(targetId).classList.remove("hidden");
