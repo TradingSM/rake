@@ -10,6 +10,65 @@ body {
     margin: 0;
 }
 
+/* Light Theme Overrides */
+body.light-mode {
+    background-color: #f7f7f7;
+    color: #222;
+}
+
+body.light-mode .container {
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #222;
+}
+
+body.light-mode .nav-btn {
+    background: #ddd;
+    color: #ff4c4c;
+    border-color: #ddd;
+}
+
+body.light-mode .nav-btn.active {
+    background: #ff4c4c;
+    color: #fff;
+    border-color: #ff4c4c;
+}
+
+body.light-mode h1,
+body.light-mode .result-text {
+    color: #ff4c4c;
+}
+
+body.light-mode input {
+    background: #eee;
+    color: #222;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#themeBtn {
+    background: #2a2a2a;
+    color: #00c6ff;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+body.light-mode #themeBtn {
+    background: #ddd;
+    color: #ff4c4c;
+}
+
+
 /* Container styling */
 .container {
     background: #1e1e1e;
