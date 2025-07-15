@@ -1,4 +1,3 @@
-
 /* Dark mode background */
 body {
     font-family: 'Poppins', sans-serif;
@@ -8,6 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    position: relative;
 }
 
 /* Light Theme Overrides */
@@ -45,17 +45,19 @@ body.light-mode input {
     box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
 }
 
+/* Theme toggle button fixed for visibility */
 .theme-toggle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 100;
 }
 
 #themeBtn {
     background: #2a2a2a;
     color: #00c6ff;
     border: none;
-    padding: 6px 12px;
+    padding: 8px 16px;
     cursor: pointer;
     border-radius: 6px;
     font-weight: bold;
@@ -63,11 +65,20 @@ body.light-mode input {
     transition: 0.3s;
 }
 
+#themeBtn:hover {
+    background: #00c6ff;
+    color: #121212;
+}
+
 body.light-mode #themeBtn {
     background: #ddd;
     color: #ff4c4c;
 }
 
+body.light-mode #themeBtn:hover {
+    background: #ff4c4c;
+    color: #fff;
+}
 
 /* Container styling */
 .container {
@@ -91,7 +102,7 @@ body.light-mode #themeBtn {
     position: relative;
     z-index: 10;
     gap: 6px;
-    flex-wrap: wrap; /* Allows wrapping if needed */
+    flex-wrap: wrap;
 }
 
 /* Pill buttons */
@@ -103,7 +114,7 @@ body.light-mode #themeBtn {
     border-radius: 6px;
     cursor: pointer;
     font-size: 12.5px;
-    flex: 1 1 30%; /* Responsive layout: grow, shrink, basis */
+    flex: 1 1 30%;
     min-width: 90px;
     max-width: 100px;
     display: flex;
@@ -117,6 +128,10 @@ body.light-mode #themeBtn {
     line-height: 1.1;
 }
 
+.nav-btn:hover {
+    background: #00c6ff;
+    color: #121212;
+}
 
 .nav-btn.active {
     background: #00c6ff;
@@ -132,7 +147,7 @@ body.light-mode #themeBtn {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    margin-top: 0px;
+    margin-top: 0;
     padding-top: 10px;
 }
 
@@ -145,7 +160,7 @@ body.light-mode #themeBtn {
 h1 {
     font-size: 22px;
     font-weight: bold;
-    margin-top: 0px;
+    margin-top: 0;
     padding-top: 10px;
     margin-bottom: 15px;
     color: #00c6ff;
@@ -184,6 +199,10 @@ input {
     text-align: center;
     box-shadow: inset 0px 0px 5px rgba(0, 198, 255, 0.3);
     transition: all 0.2s ease-in-out;
+}
+
+input:focus {
+    box-shadow: inset 0px 0px 8px rgba(0, 198, 255, 0.6);
 }
 
 /* Result Text (shared across all calculators) */
