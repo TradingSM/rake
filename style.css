@@ -195,4 +195,24 @@ input {
 }
 
 input:focus {
-    box-
+    box-shadow: inset 0px 0px 8px rgba(0, 198, 255, 0.6);
+}
+
+.result-text {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #00c6ff;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.calculator-section .input-group,
+.calculator-section h1,
+.calculator-section .result-text {
+    text-align: center;
+    width: 90%;
+}
