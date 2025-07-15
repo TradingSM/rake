@@ -13,20 +13,17 @@
 
 <body>
 
-  <!-- Light/Dark Toggle -->
   <div class="theme-toggle">
     <button id="themeBtn">Light Mode</button>
   </div>
 
   <div class="container">
-    <!-- Navigation Pills -->
     <div class="nav">
       <button class="nav-btn active" data-target="vig-calculator">Vig Calculator</button>
       <button class="nav-btn" data-target="zscore-calculator">Z-Score Calculator</button>
       <button class="nav-btn" data-target="ou-calculator">O/U from Rake</button>
     </div>
 
-    <!-- Vig Calculator Section -->
     <div id="vig-calculator" class="calculator-section">
       <h1>Vig Calculator</h1>
       <div class="input-group">
@@ -40,7 +37,6 @@
       <div id="result" class="result-text">Vig: 0%</div>
     </div>
 
-    <!-- Z-Score Calculator Section -->
     <div id="zscore-calculator" class="calculator-section hidden">
       <h1>Z-Score Calculator</h1>
       <div class="input-group">
@@ -50,7 +46,6 @@
       <div id="zscore-result" class="result-text">Z-Score: 0</div>
     </div>
 
-    <!-- O/U Calculator Section -->
     <div id="ou-calculator" class="calculator-section hidden">
       <h1>O/U Rake</h1>
       <div class="input-group">
@@ -65,14 +60,12 @@
     </div>
   </div>
 
-  <!-- Scripts -->
   <script src="site.js" defer></script>
   <script src="func.js" defer></script>
   <script src="zscore.js" defer></script>
   <script src="ou.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.9.4/jstat.min.js"></script>
 
-  <!-- Service Worker -->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
