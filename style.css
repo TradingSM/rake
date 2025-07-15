@@ -16,6 +16,20 @@ body.light-mode {
     color: #222;
 }
 
+body.light-mode .nav-btn {
+    background: #ddd;
+    color: #ff4c4c;
+    border-color: #ddd;
+    transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+body.light-mode .nav-btn.active {
+    background: #ff4c4c;
+    color: #fff;
+    border-color: #ff4c4c;
+}
+
+
 body.light-mode .container {
     background: #ffffff;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
