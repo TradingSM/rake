@@ -24,7 +24,11 @@ body.light-mode .nav-btn {
     background: #ddd;
     color: #ff4c4c;
     border-color: #ddd;
-    transition: background 0.2s, border 0.2s, color 0.2s;
+}
+
+body.light-mode .nav-btn:hover {
+    background: #ff4c4c;
+    color: #fff;
 }
 
 body.light-mode .nav-btn.active {
@@ -117,7 +121,7 @@ body.light-mode #themeBtn:hover {
     justify-content: center;
     text-transform: uppercase;
     font-weight: bold;
-    transition: background 0.2s, border 0.2s, color 0.2s;
+    transition: all 0.2s;
     letter-spacing: 0.4px;
     text-align: center;
     line-height: 1.1;
@@ -191,24 +195,4 @@ input {
 }
 
 input:focus {
-    box-shadow: inset 0px 0px 8px rgba(0, 198, 255, 0.6);
-}
-
-.result-text {
-    margin-top: 15px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #00c6ff;
-    background: none;
-    border-radius: 0;
-    box-shadow: none;
-    text-align: center;
-    padding: 5px 0;
-}
-
-.calculator-section .input-group,
-.calculator-section h1,
-.calculator-section .result-text {
-    text-align: center;
-    width: 90%;
-}
+    box-
