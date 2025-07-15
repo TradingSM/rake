@@ -1,20 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculator Suite</title>
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#00c6ff">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
 </head>
+
 <body>
 
   <!-- Light/Dark Toggle -->
   <div class="theme-toggle">
-    <button id="themeBtn">Switch Theme</button>
+    <button id="themeBtn">Light Mode</button>
   </div>
 
   <div class="container">
@@ -64,12 +65,14 @@
     </div>
   </div>
 
+  <!-- Scripts -->
   <script src="site.js" defer></script>
   <script src="func.js" defer></script>
   <script src="zscore.js" defer></script>
   <script src="ou.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.9.4/jstat.min.js"></script>
-   <!-- ✅ Register service worker -->
+
+  <!-- Service Worker -->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
@@ -78,4 +81,5 @@
     }
   </script>
 </body>
+
 </html>
