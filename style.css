@@ -127,10 +127,18 @@ body.light-mode #themeBtn:hover {
     line-height: 1.1;
 }
 
-.nav-btn:hover {
+/* Dark mode hover */
+body:not(.light-mode) .nav-btn:hover {
     background: #00c6ff;
     color: #121212;
 }
+
+/* Light mode hover */
+body.light-mode .nav-btn:hover {
+    background: #ff4c4c;
+    color: #fff;
+}
+
 
 .nav-btn.active {
     background: #00c6ff;
